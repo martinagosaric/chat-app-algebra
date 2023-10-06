@@ -1,38 +1,292 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* --LOGIN---------------------------------------------------- */
+.login-container {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.login-wrapper {
+  height: 100%;
+  width: 50%;
+  margin: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../Images/login2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+.data {
+  height: 70%;
+  width: 70%;
+  margin: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../Images/login1.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: move 2s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+h3 {
+  font-family: "Inter", sans-serif;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 2px;
+  font-size: 1.6rem;
+  text-align: center;
+}
+.username {
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  background-color: #f7eeee;
+  padding: 0.3em 1.5em;
+  font-family: "Inter", sans-serif;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1.7px;
+  font-size: 1.4rem;
+}
+.user-color {
+  width: 30px;
+  height: 30px;
+  background-color: #f7eeee;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  cursor: pointer;
+}
+.login-btn:hover {
+  transition: background-color 0.2s ease-in-out;
+  background-color: #b89f9f;
+}
+
+.login-btn {
+  font-size: 1rem;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  background-color: #dbc1c1;
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(1000px);
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    transform: translateY(0px);
   }
+}
+
+/* --HEADER----------------------------------------------------- */
+
+.header {
+  max-width: 100%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 1em;
+  border-bottom: 1px solid #ac9f9f;
+  background-color: #ddc0c0ea;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 1.7em;
+  color: #746363;
+}
+
+/* --SIDEBAR---------------------------------------------------- */
+
+.sidebar-right {
+  max-height: 100vh;
+  text-align: left;
+  background-color: #e1cccc2d;
+  border-left: 1px solid #ac9f9f;
+  width: 15%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 2%;
+  padding: 1em;
+}
+
+.user {
+  color: #7f6b6b;
+  font-size: 1em;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-bottom: 16px;
+  text-align: center;
+}
+
+.userslist {
+  color: #7f6b6b;
+  font-size: 1em;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 5px;
+  display: flex;
+}
+.user-circle {
+  margin-right: 5px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: inline-block;
+}
+ul {
+  list-style-type: none;
+}
+
+/* --CHAT------------------------------------------------------ */
+.main-wrap {
+  max-width: 65%;
+  height: 90vh;
+  margin: 1em auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  background-image: url("../Images/login2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.chat-container {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  overflow: scroll;
+}
+
+/* --MESSAGES--------------------------------------------------- */
+.sidebar-left {
+  width: 80%;
+  overflow-y: auto;
+  max-height: 70vh;
+}
+
+.message-username {
+  color: rgb(196, 172, 172);
+  padding-bottom: 3px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.message-left {
+  display: flex;
+  align-items: left;
+  margin-top: 10px;
+}
+
+.message-right {
+  display: flex;
+  margin-top: 10px;
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.message-text {
+  display: flex;
+  color: rgb(145, 93, 93);
+  padding: 10px 10px;
+  max-height: 400px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.border-l {
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 15px 15px 15px 0px;
+  background-color: #f0eaeaa1;
+}
+.border-r {
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 15px 15px 0px 15px;
+  background-color: #ede0e0c7;
+}
+
+/*-- INPUT------------------------------------------------------ */
+.input-container {
+  display: flex;
+  flex-direction: row;
+  margin: 0px;
+}
+
+.input-wrapper {
+  display: flex;
+  flex: 1.7;
+  max-width: 100%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 13px;
+  padding-left: 1em;
+  border-top: 1px solid #ac9f9f;
+  background-color: #ddc0c0ea;
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 1.7em;
+}
+
+.input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 75%;
+  margin-bottom: 0.7em;
+  margin-right: 0.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-y: auto;
+  resize: none;
+}
+
+.btn-send {
+  font-size: 1rem;
+  color: #ffffff;
+  padding: 12px;
+  margin-bottom: 0.7em;
+  margin-left: 0.5em;
+  width: 100px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background-color: #bfa7a7;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.btn-send:hover {
+  transition: background-color 0.2s ease-in-out;
+  background-color: #a78f8f;
+}
+
+.logout-container {
+  display: flex;
+  flex-direction: row;
+  flex: 0.3;
+  padding-top: 13px;
+  background-color: #ddc0c0ea;
+}
+.btn-logout {
+  font-size: 1rem;
+  color: #7c5e5e;
+  padding: 12px;
+  margin-bottom: 0.7em;
+  margin-left: 10px;
+  margin-right: 1.5em;
+  width: 100px;
+  border: none;
+  cursor: pointer;
+  background-color: #74636300;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.btn-logout:hover {
+  transition: color 0.2s ease-in-out;
+  color: #ffffff;
 }
